@@ -28,150 +28,33 @@
       <div class="my_container">
         <!-- ROW -->
         <div class="row row-cols-5 pb-5">
+          <?php foreach($database as $key => $value) {
+          ?>
           <!-- CARD -->
           <div class="my_disc-card text-center mt-4 pt-3">
             <div class="my_card-wrapper h-100 px-3 pt-3">
               <div class="my_disc-img-wrapper">
-                <img src="
-                  <?php
-                    echo $database[0]['poster'];
-                  ?>
-                " alt="">
+                <img src="<?php echo $database[$key]['poster'];?>" alt="<?php echo $database[$key]['author'] . " " . $database[$key]['title'];?>">
               </div>
               <h4 class="my_disc-title text-uppercase mt-3">
                 <?php
-                 echo $database[0]['title'];
+                  echo $database[$key]['title'];
                 ?>
               </h4>
               <div class="my_disc-author pt-3">
                 <?php
-                  echo $database[0]['author'];
+                  echo $database[$key]['author'];
                 ?>
               </div>
               <div class="my_disc-year pb-2">
                 <?php
-                  echo $database[0]['year'];
+                  echo $database[$key]['year'];
                 ?>
               </div>
             </div>
           </div>
           <!-- /CARD -->
-
-          <!-- CARD -->
-          <div class="my_disc-card text-center mt-4 pt-3">
-            <div class="my_card-wrapper h-100 px-3 pt-3">
-              <div class="my_disc-img-wrapper">
-                <img src="
-                  <?php
-                    echo $database[1]['poster'];
-                  ?>
-                " alt="">
-              </div>
-              <h4 class="my_disc-title text-uppercase mt-3">
-                <?php
-                  echo $database[1]['title'];
-                ?>
-              </h4>
-              <div class="my_disc-author pt-3">
-                <?php
-                  echo $database[1]['author'];
-                ?>
-              </div>
-              <div class="my_disc-year pb-2">
-                <?php
-                  echo $database[1]['year'];
-                ?>
-              </div>
-            </div>
-          </div>
-          <!-- /CARD -->
-
-          <!-- CARD -->
-          <div class="my_disc-card text-center mt-4 pt-3">
-            <div class="my_card-wrapper h-100 px-3 pt-3">
-              <div class="my_disc-img-wrapper">
-                <img src="
-                  <?php
-                    echo $database[2]['poster'];
-                  ?>
-                " alt="">
-              </div>
-              <h4 class="my_disc-title text-uppercase mt-3">
-                <?php
-                  echo $database[2]['title'];
-                ?>
-              </h4>
-              <div class="my_disc-author pt-3">
-                <?php
-                  echo $database[2]['author'];
-                ?>
-              </div>
-              <div class="my_disc-year pb-2">
-                <?php
-                  echo $database[2]['year'];
-                ?>
-              </div>
-            </div>
-          </div>
-          <!-- /CARD -->
-
-          <!-- CARD -->
-          <div class="my_disc-card text-center mt-4 pt-3">
-            <div class="my_card-wrapper h-100 px-3 pt-3">
-              <div class="my_disc-img-wrapper">
-                <img src="
-                  <?php
-                    echo $database[3]['poster'];
-                  ?>
-                " alt="">
-              </div>
-              <h4 class="my_disc-title text-uppercase mt-3">
-                <?php
-                  echo $database[3]['title'];
-                ?>
-              </h4>
-              <div class="my_disc-author pt-3">
-                <?php
-                  echo $database[3]['author'];
-                ?>
-              </div>
-              <div class="my_disc-year pb-2">
-                <?php
-                  echo $database[3]['year'];
-                ?>
-              </div>
-            </div>
-          </div>
-          <!-- /CARD -->
-
-          <!-- CARD -->
-          <div class="my_disc-card text-center mt-4 pt-3">
-            <div class="my_card-wrapper h-100 px-3 pt-3">
-              <div class="my_disc-img-wrapper">
-                <img src="
-                  <?php
-                    echo $database[4]['poster'];
-                  ?>
-                " alt="">
-              </div>
-              <h4 class="my_disc-title text-uppercase mt-3">
-                <?php
-                  echo $database[4]['title'];
-                ?>
-              </h4>
-              <div class="my_disc-author pt-3">
-                <?php
-                  echo $database[4]['author'];
-                ?>
-              </div>
-              <div class="my_disc-year pb-2">
-                <?php
-                  echo $database[4]['year'];
-                ?>
-              </div>
-            </div>
-          </div>
-          <!-- /CARD -->
+          <?php } ?>
         </div>
         <!-- /ROW -->
       </div>
