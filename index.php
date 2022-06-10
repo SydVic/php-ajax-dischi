@@ -18,7 +18,9 @@
 
   <!-- HEADER -->
   <header class="my_header d-flex align-items-center ps-4">
-    <img class="logo" src="./img/logo-small.svg" alt="">
+    <div class="logo-wrapper">
+      <img class="logo" src="./img/logo-small.svg" alt="">
+    </div>
   </header>
   <!-- /HEADER -->
 

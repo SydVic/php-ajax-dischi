@@ -18,8 +18,15 @@
 <body>
   <div id="root">
     <!-- HEADER -->
-    <header class="my_header d-flex align-items-center ps-4">
-      <img class="logo" src="./img/logo-small.svg" alt="">
+    <header class="my_header d-flex align-items-center justify-content-between ps-4">
+      <div class="my_logo-wrapper">
+        <img class="logo" src="./img/logo-small.svg" alt="">
+      </div>
+      <div class="select-wrapper">
+        <select name="" id="" @change="filterDiscs">
+          <option v-for="genre in genres" :value="genre">{{ genre }}</option>
+        </select>
+      </div>
     </header>
     <!-- /HEADER -->
 
