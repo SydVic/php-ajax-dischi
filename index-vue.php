@@ -23,7 +23,7 @@
         <img class="logo" src="./img/logo-small.svg" alt="">
       </div>
       <div class="select-wrapper">
-        <select name="" id="" @change="filterDiscs">
+        <select name="" id="" v-model="selectedGenre" @change="filterDiscs(selectedGenre)">
           <option v-for="genre in genres" :value="genre">{{ genre }}</option>
         </select>
       </div>

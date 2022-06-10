@@ -3,13 +3,11 @@ const app = new Vue({
   data: {
     discs: [],
     genres: [],
+    selectedGenre: "",
   },
   methods: {
-    filterDiscs() {
-      axios.get("http://localhost/php-ajax-dischi/server.php")
-      .then((resp) => {
-        this.discs = resp.data;
-      });
+    filterDiscs(selectedGenre) {
+      this.selectedGenre = selectedGenre;
     }
   },
   computed: {
