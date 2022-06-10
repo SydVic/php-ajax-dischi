@@ -30,19 +30,19 @@
           <!-- ROW -->
           <div class="row row-cols-5 pb-5">
             <!-- CARD -->
-            <div class="my_disc-card text-center mt-4 pt-3">
+            <div v-for="disc in discs" class="my_disc-card text-center mt-4 pt-3">
               <div class="my_card-wrapper h-100 px-3 pt-3">
                 <div class="my_disc-img-wrapper">
-                  <img src="" alt="">
+                  <img :src="disc.poster" :alt="disc.author + ' ' + disc.title">
                 </div>
                 <h4 class="my_disc-title text-uppercase mt-3">
-                  {{prova}}
+                  {{ disc.title }}
                 </h4>
                 <div class="my_disc-author pt-3">
-
+                {{ disc.author }}
                 </div>
                 <div class="my_disc-year pb-2">
-
+                {{ disc.year }}
                 </div>
               </div>
             </div>
