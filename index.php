@@ -1,3 +1,7 @@
+<?php
+  require_once __DIR__ . "/database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +16,6 @@
 </head>
 
 <body>
-  <?php
-    include_once __DIR__ . "/database.php";
-  ?>
 
   <!-- HEADER -->
   <header class="my_header d-flex align-items-center ps-4">

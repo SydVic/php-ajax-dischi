@@ -6,8 +6,15 @@ const app = new Vue({
     selectedGenre: "",
   },
   methods: {
-    filterDiscs(selectedGenre) {
-      this.selectedGenre = selectedGenre;
+    getDiscs() {
+      axios.get("http://localhost/php-ajax-dischi/server.php", {
+        params: {
+          genre: this.selectedGenre
+        }
+      })
+      .then((resp) => {
+        this.discs = resp.data;
+      });
     }
   },
   computed: {
@@ -17,12 +24,9 @@ const app = new Vue({
           this.genres.push(item.genre);
         }
       });
-    }
+    },
   },
   created() {
-    axios.get("http://localhost/php-ajax-dischi/server.php")
-    .then((resp) => {
-      this.discs = resp.data;
-    });
+    this.getDiscs();
   }
 });
